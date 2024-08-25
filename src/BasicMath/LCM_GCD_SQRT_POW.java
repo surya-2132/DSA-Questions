@@ -50,7 +50,7 @@ public class LCM_GCD_SQRT_POW {
         return gcdRecursive(b, a % b);
         //i) (30 , 20 % 30) -> a=30, b=20
         //ii) (20, 30 % 20) -> a=20, b=10
-        //iii) (20,20 % 10) -> a=20, b=0
+        //iii) (10,20 % 10) -> a=20, b=0
         //since b = 0 return a value where a = 20; DO recursive tree manually.
     }
 
