@@ -1,9 +1,9 @@
-package Recursion.SubSequencePattern;
+package Recursion.SubSetAndCombinationSums;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class _1PowerSet {
+public class Subset0_CombinationSum1 {
     public static void main(String[] args) {
         int[] nums = new int[]{1,2,3};
         System.out.println(powerSet(nums));

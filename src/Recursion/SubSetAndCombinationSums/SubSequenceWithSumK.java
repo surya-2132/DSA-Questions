@@ -1,4 +1,4 @@
-package Recursion.SubSequencePattern;
+package Recursion.SubSetAndCombinationSums;
 
 import java.util.ArrayList;
 import java.util.List;
