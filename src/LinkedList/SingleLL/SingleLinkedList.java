@@ -188,4 +188,21 @@ public class SingleLinkedList {
         return head;
     }
 
+
+    // Print method for Single Linked List
+    public void printList(ListNode head) {
+        if (head == null) {
+            System.out.println("The list is empty.");
+            return;
+        }
+
+        ListNode temp = head;
+        System.out.print("Single Linked List: ");
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+
 }
