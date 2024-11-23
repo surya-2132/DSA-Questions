@@ -77,13 +77,13 @@ public class SingleLinkedList {
             return null;
         }
 
-        if(elem == temp.data){
+        if(elem == temp.val){
             temp = temp.next;
             return temp;
         }
 
         while(temp != null){
-            if(elem == temp.data){
+            if(elem == temp.val){
                 prev.next = temp.next;
                 return head;
             }
@@ -166,7 +166,7 @@ public class SingleLinkedList {
         }
 
         // Handle insertion before the head
-        if (head.data == beforeElem) {
+        if (head.val == beforeElem) {
             newNode.next = head; // Link the new node to the current head
             head = newNode;
             return head; // New node becomes the head
@@ -175,7 +175,7 @@ public class SingleLinkedList {
         // Traverse the list to find the node with value X
         //noinspection DuplicatedCode
         while (temp != null) {
-            if (temp.data == beforeElem) {
+            if (temp.val == beforeElem) {
                 newNode.next = temp; // Link the new node to the current node
                 prev.next = newNode; // Link the previous node to the new node
                 return head; // Return modified list
@@ -186,23 +186,6 @@ public class SingleLinkedList {
 
         // If X is not found, return the original list
         return head;
-    }
-
-
-    // Print method for Single Linked List
-    public void printList(ListNode head) {
-        if (head == null) {
-            System.out.println("The list is empty.");
-            return;
-        }
-
-        ListNode temp = head;
-        System.out.print("Single Linked List: ");
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        }
-        System.out.println("null");
     }
 
 }
