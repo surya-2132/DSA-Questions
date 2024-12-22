@@ -1,5 +1,7 @@
 package Arrays.Medium;
 
+import Utility.Operations;
+
 import java.util.Arrays;
 
 public class SortColors {
@@ -18,7 +20,7 @@ public class SortColors {
 
             switch(nums[mid]){
                 case 0:
-                    swap(nums, start, mid);
+                    Operations.swap(nums, start, mid);
                     start++;
                     mid++;
                     break;
@@ -28,18 +30,12 @@ public class SortColors {
                     break;
 
                 case 2:
-                    swap(nums, mid, end);
+                    Operations.swap(nums, mid, end);
                     end--;
                     break;
             }
         }
 
         System.out.println(Arrays.toString(nums));
-    }
-
-    public static void swap(int[] nums, int num1, int num2){
-        int temp = nums[num1];
-        nums[num1] = nums[num2];
-        nums[num2] = temp;
     }
 }

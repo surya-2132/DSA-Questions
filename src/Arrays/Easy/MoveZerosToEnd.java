@@ -1,6 +1,6 @@
 package Arrays.Easy;
 
-import Arrays.Medium.SortColors;
+import Utility.Operations;
 
 import java.util.Arrays;
 
@@ -15,7 +15,7 @@ public class MoveZerosToEnd {
 
         while(right < nums.length){
             if(nums[right] != 0){
-                SortColors.swap(nums, left, right);
+                Operations.swap(nums, left, right);
                 left++;
             }
             right++;
