@@ -3,7 +3,7 @@ package StackAndQueue.MonotonicStack;
 import java.util.Arrays;
 import java.util.Stack;
 
-public class NextGreater1 {
+public class NextGreater {
     public static void main(String[] args) {
         int[] nums = {8, 3, 4, 6, 1, 2, 7, 5, 9};
         System.out.println(Arrays.toString(nextGreater1Optimal(nums)));
@@ -43,7 +43,8 @@ public class NextGreater1 {
         Stack<Integer> stack = new Stack<>();
 
         for(int i = n-1; i >= 0; i--){
-            //removing elements from stack whichever smaller than curr elem
+            // Remove elements from the stack that are smaller than or equal to nums[i].
+            // The next greater element must be larger than nums[i].
             while(!stack.isEmpty() && nums[i] >= stack.peek()){
                 stack.pop();
             }
