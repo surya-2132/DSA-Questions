@@ -14,7 +14,7 @@ public class LeaderArray {
         int right = nums.length-1;
         int left = nums.length-2;
 
-        arrayList.add(nums.length);
+        arrayList.add(nums[right]);
         while(left >= 0){
             if(nums[left] > nums[right]){
                 arrayList.add(nums[left]);

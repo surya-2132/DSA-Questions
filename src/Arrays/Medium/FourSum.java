@@ -6,7 +6,7 @@ public class FourSum {
 
     public static void main(String[] args) {
         int[] nums = {2, -1, 0, 1, -2, 2, -1, 1, 0, -2, 2, -1, 0, 1, -2, 2, 0, -1, 1, -2};
-        System.out.println("Four Sum: " + fourSumBetter(nums, 4));
+        System.out.println("Four Sum: " + fourSumOptimal(nums, 4));
     }
 
 
@@ -91,8 +91,41 @@ public class FourSum {
 
 
     //TC -> O(n x log n) + O(n^3) and SC -> O(1)
-    // Do it later
     // Same approach like 3SUm with pointer adjustment according to 4Sum
-    // public static List<List<Integer>> threeSumOptimal(int[] nums) {}
+    // TC -> O(n^3), SC -> O(1) if we exclude the output space
+    public static List<List<Integer>> fourSumOptimal(int[] nums, int target) {
+        Set<List<Integer>> uniqueQuad = new HashSet<>();
 
+        Arrays.sort(nums);
+
+        for (int i = 0; i < nums.length - 3; i++) {
+            if (i > 0 && nums[i] == nums[i-1]) continue;
+
+            for (int j = i + 1; j < nums.length - 2; j++) {
+                if (j > i + 1 && nums[j] == nums[j-1]) continue;
+
+                int left = j + 1;
+                int right = nums.length - 1;
+
+                while (left < right) {
+                    int sum = nums[i] + nums[j] + nums[left] + nums[right];
+
+                    if (sum < target) {
+                        left++;
+                    } else if (sum > target) {
+                        right--;
+                    } else {
+                        List<Integer> currList = Arrays.asList(nums[i], nums[j], nums[left], nums[right]);
+                        uniqueQuad.add(currList);
+                        left++;
+                        right--;
+
+                        while (left < right && nums[left] == nums[left-1]) left++;
+                        while (left < right && nums[right] == nums[right+1]) right--;
+                    }
+                }
+            }
+        }
+        return new ArrayList<>(uniqueQuad);
+    }
 }
