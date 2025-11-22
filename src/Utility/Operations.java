@@ -7,4 +7,36 @@ public class Operations {
         nums[num1] = nums[num2];
         nums[num2] = temp;
     }
+
+    public static int max(int[] nums){
+        int max = Integer.MIN_VALUE;
+        for (int num : nums) {
+            if (num > max) {
+                max = num;
+            }
+        }
+
+        return max;
+    }
+
+
+    public static int min(int[] nums){
+        int minValue = Integer.MAX_VALUE;
+        for (int num : nums) {
+            if (num < minValue) {
+                minValue = num;
+            }
+        }
+
+        return minValue;
+    }
+
+
+    public static int sum(int[] nums){
+        int sum = 0;
+        for (int num : nums) {
+            sum = sum + num;
+        }
+        return sum;
+    }
 }
