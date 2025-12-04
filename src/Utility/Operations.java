@@ -8,6 +8,15 @@ public class Operations {
         nums[num2] = temp;
     }
 
+    public static int[] reverse(int[] nums, int start, int end){
+        while(start <= end){
+            Operations.swap(nums, start, end);
+            start++;
+            end--;
+        }
+        return nums;
+    }
+
     public static int max(int[] nums){
         int max = Integer.MIN_VALUE;
         for (int num : nums) {
