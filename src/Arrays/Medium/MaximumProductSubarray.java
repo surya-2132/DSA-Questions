@@ -1,6 +1,6 @@
 package Arrays.Medium;
 
-public class MaximumProductSubArray {
+class MaximumProductSubArray {
     public static void main(String[] args) {
         int[] nums = {2,0,-1,-4,2,0};
         System.out.println("Brute: "+maximumProductBrute(nums));
