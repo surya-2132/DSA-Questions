@@ -13,9 +13,35 @@ public class PascalsTriangle_123 {
     }
 
 
-    //Given two integers r and c, return the value at the rth row and cth column (1-indexed) in a Pascal's Triangle.
     public static int pascalsTriangle1(int row, int col){
-        return nCr(row-1, col-1);//since row in pascal triangle is 1 based index not 0;
+        //// 1) calling a static method into static - true
+        return nCr(row-1, col-1);
+    }
+
+    ////2) calling static method into a non-static method - true
+    public void nonStaticMethod1(){
+        System.out.println("calling static method " + nCr(1, 2));
+    }
+
+    //// 3) calling a non-static method into another non-static method
+    public void nonStaticMethod2(){
+        nonStaticMethod1();
+    }
+
+    //calculation with the formula of nCr = n! / (r! * (n-r)!)
+    public static int nCr(int n, int r){
+        ///nonStaticMethod1(); //// 4) calling a non-static method into static - False
+        if(r > n-r){r = n-r;}
+
+        if(r == 1){return n;}
+
+        int result = 1;
+        for(int i = 0; i < r; i++){ //nCr -> 9c3
+            result = result * (n - i); // 9, 8, 7
+            result = result / (i + 1); // 1, 2, 3
+        }
+
+        return result;
     }
 
 
@@ -58,22 +84,5 @@ public class PascalsTriangle_123 {
 
 
 
-    //calculation with the formula of nCr = n! / (r! * (n-r)!)
-    public static int nCr(int n, int r){
-        if(r > n-r){
-            r = n-r;
-        }
 
-        if(r == 1){
-            return n;
-        }
-
-        int result = 1;
-        for(int i = 0; i < r; i++){ //nCr -> 9c3
-            result = result * (n - i); // 9, 8, 7
-            result = result / (i + 1); // 1, 2, 3
-        }
-
-        return result;
-    }
 }
