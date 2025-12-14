@@ -5,25 +5,34 @@ import java.util.HashMap;
 
 public class LongestConsecutiveSequence {
     public static void main(String[] args) {
-        int[] nums = {100, 4, 200, 1, 3, 2};
+        int[] nums = {100, 102, 100, 101, 101, 102, 4, 4, 4, 3, 1, 2, 3, 1, 1, 5};
         System.out.println(longestConsecutiveSequenceOptimal(nums));
     }
 
     //TC -> O(N log N) + O(N)
     //SC -> O(1)
     public static int longestConsecutiveSequenceBetter(int[] nums){
-        int currentConsecutive = 1;
-        int maxConsecutive = Integer.MIN_VALUE;
-        Arrays.sort(nums);
-        for(int i = 0; i < nums.length-1; i++){
-            if(nums[i]+1 == nums[i+1]){
-                currentConsecutive++;
-                maxConsecutive = Math.max(maxConsecutive, currentConsecutive);
-            }else{
-                currentConsecutive = 1;
+        Arrays.sort(nums); //1, 1, 1, 2, 3, 3, 4, 4, 4, 5, 100, 100, 101, 101, 102, 102
+        int currConsec = 0;
+        int longestConsec = 0;
+        int oneNumLesser = Integer.MIN_VALUE;
+
+        for(int i = 0; i < nums.length; i++){
+            //n[3]-1 is 2-1 = 1 and it equals oneNumLesser which is 1 here to inc count
+            if(nums[i] - 1 == oneNumLesser){
+                currConsec++;
+                oneNumLesser = nums[i];
             }
+            //condition where 5, 100 -> oneNumLesser should be 99, we don't have so reset variables
+            else if(nums[i] != oneNumLesser){
+                currConsec = 1;
+                oneNumLesser = nums[i];
+            }
+
+            longestConsec = Math.max(longestConsec, currConsec);
         }
-        return maxConsecutive;
+
+        return longestConsec;
     }
 
 
