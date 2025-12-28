@@ -64,4 +64,16 @@ public class ListNode {
         System.out.println("null");
     }
 
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        ListNode curr = this;
+        while (curr != null) {
+            sb.append(curr.val);
+            if (curr.next != null) sb.append(" -> ");
+            curr = curr.next;
+        }
+        return sb.toString();
+    }
 }
