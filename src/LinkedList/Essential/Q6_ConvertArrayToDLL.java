@@ -1,8 +1,8 @@
-package LinkedList.Easy;
+package LinkedList.Essential;
 
 import LinkedList.DoubleLL.ListNode;
 
-public class ConvertArrayToDLL {
+public class Q6_ConvertArrayToDLL {
     public static void main(String[] args) {
 
     }

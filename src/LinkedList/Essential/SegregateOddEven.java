@@ -1,4 +1,4 @@
-package LinkedList.Easy;
+package LinkedList.Essential;
 
 import LinkedList.SingleLL.ListNode;
 import java.util.ArrayList;

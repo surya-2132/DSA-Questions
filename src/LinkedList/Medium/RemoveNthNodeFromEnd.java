@@ -1,4 +1,4 @@
-package LinkedList.Easy;
+package LinkedList.Medium;
 
 import LinkedList.SingleLL.ListNode;
 

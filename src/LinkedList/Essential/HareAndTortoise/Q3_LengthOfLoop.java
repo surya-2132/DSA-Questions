@@ -1,14 +1,15 @@
-package LinkedList.HareAndTortoise;
+package LinkedList.Essential.HareAndTortoise;
 
 import LinkedList.SingleLL.ListNode;
 
-public class Q4_FindStartingPointOfLoop {
+public class Q3_LengthOfLoop {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         for (int i = 2; i <= 6; i++) {
             head.add(i);
         }
 
+        // ---------- Case 2: Create a loop ----------
         // 1 -> 2 -> 3 -> 4 -> 5 -> 6
         //           ^--------------|
         ListNode temp = head;
@@ -21,13 +22,12 @@ public class Q4_FindStartingPointOfLoop {
         }
         temp.next = loopNode;  // connect last node to node with value 3
 
-        ListNode loopStartingNode = startingPoint(head);
-        System.out.println("Loop Starting Point: " + loopStartingNode.val);
+        System.out.println("Loop length: " + lengthOfLoop(head));
     }
 
+    public static int lengthOfLoop(ListNode head){
 
-    public static ListNode startingPoint(ListNode head){
-        if (head == null || head.next == null) return null;
+        if (head == null) return 0;
 
         ListNode slow = head;
         ListNode fast = head;
@@ -37,15 +37,16 @@ public class Q4_FindStartingPointOfLoop {
             fast = fast.next.next;
 
             if(slow == fast){
+                int count = 0;
+                slow = slow.next;
 
-                slow = head;
                 while(slow != fast){
+                    count++;
                     slow = slow.next;
-                    fast = fast.next;
                 }
-                return slow;  //or return fast
+                return count;
             }
         }
-        return null;
+        return 0;
     }
 }

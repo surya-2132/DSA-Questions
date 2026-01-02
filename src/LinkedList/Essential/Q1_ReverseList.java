@@ -1,8 +1,8 @@
-package LinkedList.Easy;
+package LinkedList.Essential;
 
 import LinkedList.SingleLL.ListNode;
 
-public class ReverseList {
+public class Q1_ReverseList {
 
     public static void main(String[] args) {
 

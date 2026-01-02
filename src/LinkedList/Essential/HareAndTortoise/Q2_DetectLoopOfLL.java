@@ -1,4 +1,4 @@
-package LinkedList.HareAndTortoise;
+package LinkedList.Essential.HareAndTortoise;
 
 import LinkedList.SingleLL.ListNode;
 
