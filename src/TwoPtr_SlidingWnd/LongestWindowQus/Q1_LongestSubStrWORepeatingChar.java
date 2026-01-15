@@ -1,8 +1,8 @@
-package TwoPtr_SlidingWnd.Medium;
+package TwoPtr_SlidingWnd.LongestWindowQus;
 
 import java.util.HashMap;
 
-public class LongestSubStrWORepeatingChar {
+public class Q1_LongestSubStrWORepeatingChar {
     public static void main(String[] args) {
         System.out.println("Maximum length: "+lengthOfLongestSubstring("abcabcbb"));
     }

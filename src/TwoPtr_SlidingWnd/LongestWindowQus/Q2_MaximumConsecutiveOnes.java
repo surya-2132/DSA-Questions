@@ -1,6 +1,6 @@
-package TwoPtr_SlidingWnd.Medium;
+package TwoPtr_SlidingWnd.LongestWindowQus;
 
-public class MaximumConsecutiveOnes {
+public class Q2_MaximumConsecutiveOnes {
     public static void main(String[] args) {
         int[] nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
         System.out.println("maximumConsecOnes_i : " + maximumConsecOnes_i(nums));

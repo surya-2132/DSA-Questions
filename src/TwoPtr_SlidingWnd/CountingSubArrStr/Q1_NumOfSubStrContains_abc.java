@@ -1,6 +1,6 @@
-package TwoPtr_SlidingWnd.Hard;
+package TwoPtr_SlidingWnd.CountingSubArrStr;
 
-public class NumOfSubStrContains_abc {
+public class Q1_NumOfSubStrContains_abc {
     public static void main(String[] args) {
         System.out.println(abcSubStr("abcba"));
         System.out.println(abcSubStrOptimal("abcba"));

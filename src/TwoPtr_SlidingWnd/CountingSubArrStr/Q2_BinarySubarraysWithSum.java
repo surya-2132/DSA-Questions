@@ -1,6 +1,6 @@
-package TwoPtr_SlidingWnd.Hard;
+package TwoPtr_SlidingWnd.CountingSubArrStr;
 
-public class BinarySubarraysWithSum {
+public class Q2_BinarySubarraysWithSum {
     public static void main(String[] args) {
         int[] nums = {1, 1, 0, 1, 0, 0, 1};
         System.out.println("Binary SubArrayCount equal to target: "+numSubarraysWithSum(nums, 3));

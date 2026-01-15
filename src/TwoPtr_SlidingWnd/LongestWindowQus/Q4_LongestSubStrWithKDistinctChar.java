@@ -1,8 +1,8 @@
-package TwoPtr_SlidingWnd.Medium;
+package TwoPtr_SlidingWnd.LongestWindowQus;
 
 import java.util.HashMap;
 
-public class KDistinctChar {
+public class Q4_LongestSubStrWithKDistinctChar {
     public static void main(String[] args) {
         System.out.println(kDistinctChar("aababbcaacc", 2));
     }

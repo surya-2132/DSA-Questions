@@ -1,8 +1,8 @@
-package TwoPtr_SlidingWnd.Medium;
+package TwoPtr_SlidingWnd.LongestWindowQus;
 
 import java.util.HashMap;
 
-public class FruitsInBasket {
+public class Q3_FruitsInBasket {
     public static void main(String[] args) {
         System.out.println(fruitsInBasket(new int[]{3, 3, 3, 1, 2, 1, 1, 2, 3, 3, 4}));
     }
