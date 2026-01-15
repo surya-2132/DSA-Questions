@@ -1,6 +1,6 @@
-package TwoPtr_SlidingWnd.Hard;
+package TwoPtr_SlidingWnd.LongestWindowQus;
 
-public class MinimumWindowSubstring {
+public class Q6_MinimumWindowSubstring {
     public static void main(String[] args) {
         System.out.println(minimumWindowSubStr("ddaaabbca", "abc"));
     }

@@ -1,8 +1,8 @@
-package TwoPtr_SlidingWnd.Medium;
+package TwoPtr_SlidingWnd.LongestWindowQus;
 
 import java.util.HashMap;
 
-public class RepeatingCharReplace {
+public class Q5_LongestRepeatingCharReplacement {
 
     public static void main(String[] args) {
         String s = "BAABAABBBAAA";
